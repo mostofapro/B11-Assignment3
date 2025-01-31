@@ -4,10 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nature's Platter | Shop Your Daily Essentials</title>
+  <script src="https://kit.fontawesome.com/58a72d2459.js" crossorigin="anonymous"></script>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" /> -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 <body>
   <!-- Header Area -->
-   <header>
+   <header class="bg-gradient-to-b from-white to-[#EFEBE3]">
+    <!-- Navigation Section -->
+     <nav class="flex justify-between items-center container mx-auto mt-5">
+      <!-- Logo -->
+      <div class="md:flex-1">
+        <img src="assets/logo-header.png" alt="Main Logo">
+      </div>
+
+      <!-- Menu Items -->
+      <div class="hidden lg:block mr-30 text-xl cursor-pointer">
+        <ul class="flex gap-7">
+          <li><a href=""></a>Product</li>
+          <li><a href=""></a>Services</li>
+          <li><a href=""></a>Contact us</li>
+        </ul>
+      </div>
+
+      <!-- Login & Search -->
+      <div class="hidden lg:block space-x-5 cursor-pointer">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+        <button class="bg-white px-7 py-2.5 font-normal rounded-lg border border-green-600 cursor-pointer">Login</button>
+        <button class="bg-green-600 hover:bg-green-500 px-7 py-2.5 font-normal text-white rounded-lg cursor-pointer">Register</button>
+      </div>
+      <div class="lg:hidden">
+        <i class="fa-solid fa-bars text-green-600 text-2xl"></i>
+      </div>
+     </nav>
+
+     <!-- Banner Section -->
 
    </header>
 
@@ -18,7 +50,7 @@
 
     <!-- Footer Area -->
      <footer>
-      
+
      </footer>
 </body>
 </html>
