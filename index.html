@@ -6,10 +6,80 @@
   <title>Nature's Platter | Shop Your Daily Essentials</title>
   <script src="https://kit.fontawesome.com/58a72d2459.js" crossorigin="anonymous"></script>
   <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" /> -->
+
+                    <!-- Tailwind CDN -->
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+  <!-- Font CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+   <style>
+    .sora-fonts {
+      font-family: "Sora", serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+    /* .custom-animation{
+      animation-name: bannar-animation;
+      animation-duration: 30s;
+      animation-delay: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease;
+    } */
+    .custom-animation-p{
+      animation-name: paragraph-animation;
+      animation-duration: 15s;
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes bannar-animation{
+      0%{
+      font-size: rem;
+    }
+    25%{
+      font-size: 2rem;
+    }
+    75%{
+      font-size: 1rem;
+    }
+    100%{
+      font-size: 4rem;
+    }
+    }
+    @keyframes paragraph-animation {
+      0%{
+        color: #000000;
+        font-size: .5rem;
+      }
+      20%{
+        color: green;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      40%{
+        color: brown;
+        font-weight: 600;
+      }
+      60%{
+        color: aquamarine;
+        font-weight: 700;
+      }
+      75%{
+        color: red;
+        font-weight: 500;
+      }
+      100%{
+        color: #000000;
+        font-weight: 400;
+      }
+    }
+   </style>
 </head>
-<body>
+<body class="sora-fonts">
   <!-- Header Area -->
    <header class="bg-gradient-to-b from-white to-[#EFEBE3] mb-20">
     <!-- Navigation Section -->
@@ -39,12 +109,13 @@
         <i class="fa-solid fa-bars text-green-600 text-2xl"></i>
       </div>
      </nav>
+     <hr class="text-green-600 md:hidden">
 
      <!-- Banner Section -->
      <!-- Banner content -->
      <div class="container mx-auto text-center w-8/12 space-y-5 my-10">
-      <h1 class="text-4xl font-semibold">Freshness <span class="text-green-600">You Can <br>Count</span> On, Prices You’ll Love!</h1>
-      <p>Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, <br>we’ve got you covered every day!</p>
+      <h1 class="text-3xl lg:text-4xl font-semibold custom-animation">Freshness <span class="text-green-600">You Can <br>Count</span> On, Prices You’ll Love!</h1>
+      <p class="custom-animation-p">Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, <br>we’ve got you covered every day!</p>
      </div>
 
      <!-- Banner Image -->
@@ -91,6 +162,34 @@
         </div>
        </section>
 
+       <!-- Feature Product - Extra Section -->
+        <section class="container w-10/12 mx-auto mb-15 ">
+          <h3 class="text-3xl text-green-600 font-semibold mb-10">Featured Product</h3>
+          <div class="bg-[#EFEBE3] p-10 rounded-2xl flex flex-col-reverse gap-4 lg:flex-row">
+            <!-- Image section -->
+             <div>
+              <img src="assets/organic-vegetable-platter.png" alt="Featured Product">
+             </div>
+
+             <!-- Featured Content -->
+              <div class="space-y-3 text-justify">
+                <h3 class="text-2xl lg:text-3xl font-semibold">Organic Vegetable Platter</h3>
+                <h4 class="font-semibold">$69.99 – $99.99</h4>
+                <p>Enjoy the vibrant taste of health with a selection of fresh cut organic vegetables, available in an assortment of sizes. Perfect for your next gathering!</p>
+                <div class="mb-5">
+                  <h4 class="text-2xl mb-5 font-semibold text-gray-600">Choose Your Dip</h4>
+                  <select class="bg-white w-10/12 border border-green-500 font-medium rounded-md shadow-sm px-3 py-2 text-gray-700">
+                    <option class="font-medium" value="Choose">Choose an Option:</option>                 
+                    <option class="font-medium" value="option1">Small (Serves Up to 15) - $69.99</option>                 
+                    <option class="font-medium" value="option2">Large (Serves Up to 15) - $99.99</option>
+                  </select>
+                </div>
+                <button class="bg-green-600 px-5 py-3 rounded-lg text-white text-xl mr-5 cursor-pointer"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                <button class="bg-white px-5 py-3 text-xl font-semibold rounded-lg border border-green-500 cursor-pointer"><i class="fa-solid fa-cart-shopping"></i> Buy Now!</button>
+              </div>
+          </div>
+        </section>
+
        <!-- Popular Product Section -->
         <section class="bg-[#EFEBE3] py-3 mb-15 lg:py-10">
           <div class="container w-10/12 mx-auto">
@@ -111,7 +210,7 @@
               <div class="grid grid-cols-2 gap-4 flex-1 lg:grid-cols-3">
 
                 <!-- Child Card 1 -->
-                <div class="bg-white flex gap-4 rounded-lg px-3 py-5 lg:py-7">
+                <div class="bg-white flex gap-4 rounded-lg px-2 py-5">
                   <div class="bg-[#EFEBE3] rounded-lg grid items-center">
                     <img src="assets/onion.png" alt="Onion">
                   </div>
@@ -121,14 +220,14 @@
                       <p>4.5</p>
                     </div>
                     <div>
-                      <h5 class="text-xl font-medium">Onion 1 KG</h5>
-                      <p class="font-medium">$39.99</p>
+                      <h5 class="text-base lg:text-lg font-medium">Onion 1 KG</h5>
+                      <p class="text-sm font-medium">$39.99</p>
                     </div>
                   </div>
                 </div>
 
                 <!-- Child Card 2 -->
-                <div class="bg-white flex gap-4 rounded-lg px-3 py-5 lg:py-7">
+                <div class="bg-white flex gap-4 rounded-lg px-2 py-5">
                   <div class="bg-[#EFEBE3] rounded-lg grid items-center">
                     <img src="assets/tomato.png" alt="Onion">
                   </div>
@@ -138,14 +237,14 @@
                       <p>4.5</p>
                     </div>
                     <div>
-                      <h5 class="text-xl font-medium">Tomato 500 g</h5>
-                      <p class="font-medium">$39.99</p>
+                      <h5 class="text-base lg:text-lg font-medium">Tomato 500g</h5>
+                      <p class="text-sm font-medium">$39.99</p>
                     </div>
                   </div>
                 </div>
 
                 <!-- Child Card 3 -->
-                <div class="bg-white flex gap-4 rounded-lg px-3 py-5 lg:py-7">
+                <div class="bg-white flex gap-4 rounded-lg px-2 py-5">
                   <div class="bg-[#EFEBE3] rounded-lg grid items-center">
                     <img src="assets/potato.png" alt="Onion">
                   </div>
@@ -155,14 +254,14 @@
                       <p>4.5</p>
                     </div>
                     <div>
-                      <h5 class="text-xl font-medium">Potato 1 KG</h5>
-                      <p class="font-medium">$39.99</p>
+                      <h5 class="text-base lg:text-lg font-medium">Potato 1 KG</h5>
+                      <p class="text-sm font-medium">$39.99</p>
                     </div>
                   </div>
                 </div>
 
                 <!-- Child Card 4 -->
-                <div class="bg-white flex gap-4 rounded-lg px-3 py-5 lg:py-7">
+                <div class="bg-white flex gap-4 rounded-lg px-2 py-5">
                   <div class="bg-[#EFEBE3] rounded-lg grid items-center">
                     <img src="assets/tomato.png" alt="Onion">
                   </div>
@@ -172,14 +271,14 @@
                       <p>4.5</p>
                     </div>
                     <div>
-                      <h5 class="text-xl font-medium">Tomato 500 g</h5>
-                      <p class="font-medium">$39.99</p>
+                      <h5 class="text-base lg:text-lg font-medium">Tomato 500g</h5>
+                      <p class="text-sm font-medium">$39.99</p>
                     </div>
                   </div>
                 </div>
 
                 <!-- Child Card 5 -->
-                <div class="bg-white flex gap-4 rounded-lg px-3 py-5 lg:py-7">
+                <div class="bg-white flex gap-4 rounded-lg px-2 py-5">
                   <div class="bg-[#EFEBE3] rounded-lg grid items-center">
                     <img src="assets/onion.png" alt="Onion">
                   </div>
@@ -189,14 +288,14 @@
                       <p>4.5</p>
                     </div>
                     <div>
-                      <h5 class="text-xl font-medium">Onion 1 KG</h5>
-                      <p class="font-medium">$39.99</p>
+                      <h5 class="text-base lg:text-lg font-medium">Onion 1 KG</h5>
+                      <p class="text-sm font-medium">$39.99</p>
                     </div>
                   </div>
                 </div>
 
                 <!-- Child Card 6 -->
-                <div class="bg-white flex gap-4 rounded-lg px-3 py-5 lg:py-7">
+                <div class="bg-white flex gap-4 rounded-lg px-2 py-5">
                   <div class="bg-[#EFEBE3] rounded-lg grid items-center">
                     <img src="assets/tomato.png" alt="Onion">
                   </div>
@@ -206,14 +305,14 @@
                       <p>4.5</p>
                     </div>
                     <div>
-                      <h5 class="text-xl font-medium">Tomato 500 g</h5>
-                      <p class="font-medium">$39.99</p>
+                      <h5 class="text-base lg:text-lg font-medium">Tomato 500g</h5>
+                      <p class="text-sm font-medium">$39.99</p>
                     </div>
                   </div>
                 </div>
 
                 <!-- Child Card 7 -->
-                <div class="bg-white flex gap-4 rounded-lg px-3 py-5 lg:py-7">
+                <div class="bg-white flex gap-4 rounded-lg px-2 py-5">
                   <div class="bg-[#EFEBE3] rounded-lg grid items-center">
                     <img src="assets/onion.png" alt="Onion">
                   </div>
@@ -223,14 +322,14 @@
                       <p>4.5</p>
                     </div>
                     <div>
-                      <h5 class="text-xl font-medium">Onion 1 KG</h5>
-                      <p class="font-medium">$39.99</p>
+                      <h5 class="text-base lg:text-lg font-medium">Onion 1 KG</h5>
+                      <p class="text-sm font-medium">$39.99</p>
                     </div>
                   </div>
                 </div>
 
                 <!-- Child Card 8 -->
-                <div class="bg-white flex gap-4 rounded-lg px-3 py-5 lg:py-7">
+                <div class="bg-white flex gap-4 rounded-lg px-2 py-5">
                   <div class="bg-[#EFEBE3] rounded-lg grid items-center">
                     <img src="assets/potato.png" alt="Onion">
                   </div>
@@ -240,14 +339,14 @@
                       <p>4.5</p>
                     </div>
                     <div>
-                      <h5 class="text-xl font-medium">Potato 1 KG</h5>
-                      <p class="font-medium">$39.99</p>
+                      <h5 class="text-base lg:text-lg font-medium">Potato 1 KG</h5>
+                      <p class="text-sm font-medium">$39.99</p>
                     </div>
                   </div>
                 </div>
 
                 <!-- Child Card 9 -->
-                <div class="bg-white max-lg:hidden block lg:flex gap-4 rounded-lg px-3 py-5 lg:py-7">
+                <div class="bg-white max-lg:hidden block lg:flex gap-4 rounded-lg px-2 py-5">
                   <div class="bg-[#EFEBE3] rounded-lg grid items-center">
                     <img src="assets/potato.png" alt="Onion">
                   </div>
@@ -257,8 +356,8 @@
                       <p>4.5</p>
                     </div>
                     <div>
-                      <h5 class="text-xl font-medium">Potato 1 KG</h5>
-                      <p class="font-medium">$39.99</p>
+                      <h5 class="text-base lg:text-lg font-medium">Potato 1 KG</h5>
+                      <p class="text-sm font-medium">$39.99</p>
                     </div>
                   </div>
                 </div>
@@ -332,18 +431,18 @@
         <!-- Footer Logo -->
          <div class="space-y-2">
           <img src="assets/logo-footer.png" alt="">
-          <p class="w-4/6 text-xl text-white opacity-70">Discover a world of treats, toys, and essentials handpicked for your furry friends</p>
+          <p class="lg:w-4/6 text-xl text-white opacity-70">Discover a world of treats, toys, and essentials handpicked for your furry friends</p>
          </div>
 
          <!-- Footer Nav -->
-          <div class="flex flex-col gap-8 text-xl text-gray-200 w-full">
+          <div class="flex flex-col gap-8 text-xl text-gray-200 lg:w-full">
             <a href="">Product</a>
             <a href="">Services</a>
             <a href="">Contact us</a>
           </div>
 
           <!-- Footer Social Icons -->
-           <div class="text-gray-200 space-y-3 w-2/5">
+           <div class="text-gray-200 space-y-3 lg:w-2/5">
             <h5>Follow Us</h5>
             <div class="space-x-5">
               <i class="fa-brands fa-facebook"></i>
